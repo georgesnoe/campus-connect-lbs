@@ -2,7 +2,7 @@
 require_once "utilitaires.php";
 // Vérifier si les cookies sont présents
 if (!isset($_COOKIE['email']) || !isset($_COOKIE['matricule']) || !isset($_COOKIE['nom']) || !isset($_COOKIE['prenoms']) || !isset($_COOKIE['id'])) {
-  header("Location: acceuil.php");
+  header("Location: connexion.php");
 } else {
   if (!verifier_cookies($_COOKIE['nom'], $_COOKIE['prenoms'], $_COOKIE['matricule'], $_COOKIE['email'])) {
     header("Location: acceuil.php");

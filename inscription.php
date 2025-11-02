@@ -103,33 +103,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?= isset($erreur) ? "<p>$erreur</p>" : ""; ?>
     <label for="nom">
       <p>Nom</p>
-      <input type="text" name="nom" id="nom" placeholder="Nom" required />
+      <input type="text" name="nom" id="nom" placeholder="Nom" value="<?= isset($_POST['nom']) ? htmlspecialchars($_POST['nom']) : ""; ?>" required />
     </label>
 
     <label for="prenoms">
       <p>Prénoms</p>
-      <input type="text" name="prenoms" id="prenoms" placeholder="Prénoms" required />
+      <input type="text" name="prenoms" id="prenoms" placeholder="Prénoms" value="<?= isset($_POST['prenoms']) ? htmlspecialchars($_POST['prenoms']) : ""; ?>" required />
     </label>
 
     <label for="email">
       <p>Adresse email</p>
-      <input type="email" name="email" id="email" placeholder="Adresse email" required />
+      <input type="email" name="email" id="email" placeholder="Adresse email" value="<?= isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ""; ?>" required />
     </label>
 
     <label for="matricule">
-      <p>Matricule/p>
-        <input type="text" name="matricule" id="matricule" placeholder="Numéro matricule" required />
+      <p>Matricule</p>
+      <input type="text" name="matricule" id="matricule" placeholder="Numéro matricule" value="<?= isset($_POST['matricule']) ? htmlspecialchars($_POST['matricule']) : ""; ?>" required />
     </label>
 
     <label for="mot_de_passe">
       <p>Mot de passe</p>
-      <input type="password" minlength="8" name="mot_de_passe" id="mot_de_passe" placeholder="••••••••" required />
+      <input type="password" minlength="8" name="mot_de_passe" id="mot_de_passe" placeholder="••••••••" value="<?= isset($_POST['mot_de_passe']) ? htmlspecialchars($_POST['mot_de_passe']) : ""; ?>" required />
     </label>
 
     <label for="mot_de_passe_confirmation">
       <p>Confirmation du mot de passe</p>
-      <input type="password" minlength="8" name="mot_de_passe_confirmation" id="mot_de_passe_confirmation" placeholder="••••••••" required />
+      <input type="password" minlength="8" name="mot_de_passe_confirmation" id="mot_de_passe_confirmation" placeholder="••••••••" value="<?= isset($_POST['mot_de_passe_confirmation']) ? htmlspecialchars($_POST['mot_de_passe_confirmation']) : ""; ?>" required />
     </label>
+
+    <button type="submit">Inscription</button>
   </form>
 </body>
 

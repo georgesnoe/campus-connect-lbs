@@ -76,6 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <p>Mot de passe</p>
       <input type="password" minlength="8" name="mot_de_passe" id="mot_de_passe" placeholder="••••••••" required />
     </label>
+
+    <input type="submit" value="Se connecter" />
   </form>
 </body>
 
